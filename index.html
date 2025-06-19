@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Guia TCC - Dr. Adirson</title>
+    <style>
+        :root {
+            --cor-primaria: #0d47a1;
+            --cor-primaria-hover: #08306b;
+            --cor-secundaria: #1976d2;
+            --cor-fundo: #f4f6f9;
+            --cor-texto: #333;
+            --cor-container: #ffffff;
+            --sombra: 0 4px 12px rgba(0,0,0,0.1);
+            --fonte-titulo: 'Montserrat', sans-serif;
+            --fonte-texto: 'Segoe UI', 'Roboto', sans-serif;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background: var(--cor-container);
+            border-radius: 12px;
+            box-shadow: var(--sombra);
+            animation: fadeIn 0.6s ease;
+        }
+
+        h1 {
+            font-family: var(--fonte-titulo);
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--cor-primaria);
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-family: var(--fonte-titulo);
+            color: var(--cor-secundaria);
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .botao-guia {
+            display: block;
+            width: fit-content;
+            margin: 50px auto 0;
+            padding: 18px 40px;
+            background: linear-gradient(45deg, var(--cor-secundaria), var(--cor-primaria));
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .botao-guia:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(25, 118, 210, 0.4);
+        }
+
+        .autor {
+            margin-top: 60px;
+            font-size: 1rem;
+            text-align: center;
+            color: #777;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Guia Prático para Elaboração de TCC</h1>
+
+        <section>
+            <h2>Objetivo deste site</h2>
+            <p>Este guia foi elaborado com o propósito de oferecer um roteiro objetivo e organizado, auxiliando estudantes de graduação e pós-graduação em cada etapa do desenvolvimento do Trabalho de Conclusão de Curso (TCC), desde a definição do tema até a apresentação final.</p>
+        </section>
+
+        <section>
+            <h2>O que você encontrará aqui</h2>
+            <p>O conteúdo está estruturado em 13 etapas sequenciais, abordando de forma prática os principais aspectos do processo de elaboração do TCC. Além disso, o material inclui orientações adicionais com sugestões de ferramentas e técnicas para aumentar sua produtividade e otimizar o tempo dedicado ao projeto.</p>
+        </section>
+
+        <section>
+            <h2>Como utilizar o guia</h2>
+            <p>Através do menu lateral disponível na página do "Guia Completo", você poderá acessar diretamente a etapa desejada ou, preferencialmente, seguir a ordem sugerida para acompanhar o fluxo completo de construção do seu trabalho acadêmico. Cada seção foi elaborada para ser prática, clara e objetiva.</p>
+        </section>
+
+        <a href="guia.html" class="botao-guia">Acessar o Guia Completo</a>
+
+        <div class="autor">
+            Desenvolvido por <strong>Prof. Dr. Adirson Maciel de Freitas Júnior</strong>
+        </div>
+    </div>
+
+</body>
+</html>
