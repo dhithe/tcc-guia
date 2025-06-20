@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Simplificado - Dr. Adirson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="site-container">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h2>Guia Simplificado</h2>
+            </header>
+
+            <!-- BOTÃO VOLTAR AO INÍCIO -->
+            <a href="index.html" style="display: block; text-align: center; padding: 12px; background-color: #007bff; color: #ffffff; border-radius: 8px; text-decoration: none; margin-bottom: 1.5rem; font-weight: 600; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
+                ← Voltar ao Início
+            </a>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#projeto-pesquisa">1. Projeto de Pesquisa</a></li>
+                    <li><a href="#contextualizacao">2. Contextualização e Resultados Esperados</a></li>
+                    <li><a href="#metodologia-resultados">3. Metodologia e Resultados Preliminares</a></li>
+                    <li><a href="#conclusao-resumo">4. Conclusão e Resumo</a></li>
+                    <li><a href="#apresentacao">5. Slides e Apresentação</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1 class="page-title">Guia Simplificado para Elaboração do TCC</h1>
+            </header>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Pesquisa</title>
+    <style>
+        /* --- ESTILOS GERAIS E TIPOGRAFIA --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #fdfdfd;
+        }
+
+        .research-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        
+        /* --- NOVO: ESTILOS PARA O CABEÇALHO DA SEÇÃO E BOTÃO DE MINIMIZAR --- */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer; /* Indica que a área do cabeçalho é clicável */
+            margin-bottom: 20px; /* Espaço entre o header e o conteúdo */
+        }
+
+        .toggle-btn {
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: #ccc;
+            transform: scale(1.1);
+        }
+
+        .collapsible-content {
+            max-height: 5000px; /* Um valor alto para garantir que todo o conteúdo caiba */
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .collapsible-content.collapsed {
+            max-height: 0;
+            /* margin-top: -20px;  Opcional: para remover o espaço extra quando colapsado */
+        }
+        /* --- FIM DO NOVO CSS --- */
+
+
+        h2, h3, h4 {
+            color: #2c3e50; /* Azul escuro */
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: left; /* Alterado para alinhar com o botão */
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 0; /* Removido para controle pelo .section-header */
+            flex-grow: 1; /* Faz o título ocupar o espaço disponível */
+        }
+
+        h3 {
+            font-size: 1.7rem;
+            border-left: 4px solid #3498db; /* Azul */
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 1.2em;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: '✓ '; /* Marcador personalizado */
+            padding-left: 25px;
+            margin-bottom: 1.2em;
+        }
+
+        li {
+            padding-left: 10px;
+            margin-bottom: 0.8em;
+        }
+        
+        li > strong {
+            color: #34495e; /* Azul acinzentado */
+        }
+
+        /* --- LAYOUT DAS SUBSEÇÕES --- */
+        .sub-section {
+            margin-top: 60px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* --- CAIXA DE EXEMPLOS E BOTÕES --- */
+        .examples-box {
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            border: 1px solid #e7e7e7;
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .examples-box h4 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #34495e;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
+            gap: 15px;
+        }
+
+        .btn {
+            flex-grow: 1; /* Faz os botões ocuparem o mesmo espaço */
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-view {
+            background-color: #3498db; /* Azul */
+        }
+        .btn-view:hover {
+            background-color: #2980b9; /* Azul mais escuro */
+        }
+
+        .btn-download {
+            background-color: #2ecc71; /* Verde */
+        }
+        .btn-download:hover {
+            background-color: #27ae60; /* Verde mais escuro */
+        }
+
+        /* --- VISUALIZADOR DE PDF --- */
+        .pdf-viewer {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- SEÇÃO 1: PROJETO DE PESQUISA -->
+<section id="projeto-pesquisa" class="research-section">
+    <!-- ALTERADO: Adicionado cabeçalho com botão -->
+    <div class="section-header">
+        <h2>1. Projeto de Pesquisa</h2>
+        <button class="toggle-btn" data-target="content-1">-</button>
+    </div>
+    
+    <!-- NOVO: Div para envolver o conteúdo recolhível -->
+    <div id="content-1" class="collapsible-content">
+        <!-- SUBSEÇÃO: PLANO DE PESQUISA -->
+        <div class="sub-section">
+            <h3>Plano de Pesquisa</h3>
+            <div class="image-container">
+                <img src="img/img1.png" alt="Imagem ilustrativa do plano de pesquisa">
+            </div>
+            <p>O plano de pesquisa começa com a formulação da pergunta de pesquisa, que deve ser clara, específica e direta, expressando exatamente o que será investigado. Idealmente, essa pergunta tem no máximo 20 palavras e foca na relação entre fenômenos, variáveis ou comportamentos específicos.</p>
+            <p>Em seguida, é preciso justificar por que a pergunta é importante. Isso envolve apresentar o contexto do problema, as teorias existentes e o que já foi descoberto até o momento. É fundamental revisar a literatura, destacando ao menos dois trabalhos acadêmicos que tratem do tema. Esses trabalhos mostram que há interesse e lacunas que ainda precisam ser exploradas, seja por divergência de resultados, novos dados ou mudanças no contexto econômico.</p>
+            <p>Depois, descreve-se o plano para responder à pergunta. Essa etapa define:</p>
+            <ul>
+                <li><strong>Perspectiva teórica utilizada:</strong> ex.: teoria Keynesiana, teoria dos ciclos reais, institucionalismo, etc.</li>
+                <li><strong>Método de pesquisa:</strong> ex.: aplicação de testes estatísticos, experimentos de laboratório, modelos matemáticos, estudos de caso ou levantamentos de campo.</li>
+                <li><strong>Forma e estrutura dos dados:</strong> ex.: dados em painel, cross-section, séries temporais, dados experimentais.</li>
+            </ul>
+            <p>Nesse ponto, também podem ser indicados resultados preliminares, se já houver algum indicativo de tendência nos dados analisados.</p>
+            <p>A seguir, o pesquisador define quais são as respostas esperadas com base na teoria e nos dados. Aqui se formula a hipótese principal, que expressa o que se espera encontrar, e as hipóteses alternativas, que representam possíveis explicações concorrentes. É necessário indicar como os dados e o método permitem distinguir entre essas hipóteses, e quais serão as implicações dos resultados: novas interpretações teóricas, propostas de políticas públicas, ou aplicações práticas na área estudada.</p>
+            <p>Por fim, define-se um título provisório para o trabalho, que sintetiza de forma objetiva o foco da pesquisa.</p>
+            
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf1')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word2.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf1" class="pdf-viewer">
+                    <iframe src="word/word1.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBSEÇÃO: PROJETO DE PESQUISA -->
+        <div class="sub-section">
+            <h3>Projeto de Pesquisa</h3>
+            <div class="image-container">
+                <img src="img/img2.png" alt="Imagem ilustrativa do projeto de pesquisa">
+            </div>
+            <p>O título do projeto deve ser claro e conciso, com até 15 palavras, expressando o tema principal sem usar termos genéricos como “Estudo de” ou “Análise de”. A pergunta de pesquisa deve ser formulada de forma clara e direta, em até 20 palavras, definindo o problema central do estudo.</p>
+            <p>Na introdução, descreva o tema investigado, justificando sua relevância e aplicabilidade. Apresente definições conceituais, principais desafios e lacunas existentes, embasando com pelo menos dois trabalhos acadêmicos relevantes, citando autores e ano.</p>
+            <p>O objetivo deve indicar o que o trabalho pretende alcançar, usando verbos no infinitivo, como identificar, avaliar ou comparar. Caso necessário, inclua objetivos específicos para detalhar melhor o foco da pesquisa.</p>
+            <p>Na metodologia, explique como a pesquisa será conduzida, especificando o tipo de pesquisa (estudo de caso, levantamento, bibliográfica, etc.), o método utilizado (estatístico, qualitativo, documental, etc.), os dados que serão usados (primários, secundários, entrevistas, painel, etc.) e a forma de análise, como comparações entre grupos, períodos ou teorias.</p>
+            <p>Os resultados esperados devem apresentar as hipóteses que serão testadas, a hipótese alternativa caso a principal seja refutada, e as possíveis implicações práticas ou teóricas dos achados.</p>
+            <p>Inclua um cronograma com as atividades planejadas e seus respectivos prazos, organizando a pesquisa e a redação conforme as etapas do curso.</p>
+            <p>Por fim, liste as referências bibliográficas principais citadas, formatadas conforme as normas do PECEGE.</p>
+            
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf2')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word4.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf2" class="pdf-viewer">
+                    <iframe src="word/word3.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- SUBSEÇÃO: INTRODUÇÃO -->
+        <div class="sub-section">
+            <h3>Introdução</h3>
+            <div class="image-container">
+                <img src="img/img3.png" alt="Imagem ilustrativa da introdução">
+            </div>
+            <p>A introdução deve começar apresentando o tema principal da pesquisa e seu contexto. É importante utilizar dados atualizados e fontes confiáveis para mostrar a relevância atual do tema. Em seguida, deve-se relacionar o estudo com a literatura existente, citando autores que já investigaram o mesmo tema ou temas relacionados, indicando como o trabalho se conecta ou avança em relação aos estudos anteriores.</p>
+            <p>Na sequência, é necessário definir claramente o tema de estudo, explicando de forma objetiva o que será investigado. Deve-se também justificar a importância do tema, destacando por que a pesquisa é necessária e quais lacunas no conhecimento atual ela busca preencher, sempre embasando com referências de qualidade.</p>
+            <p>Após essa contextualização, deve-se apresentar de forma direta o problema central que será estudado ou resolvido no trabalho. Essa é a questão que guiará toda a pesquisa.</p>
+            <p>Por fim, a introdução deve expor o objetivo geral do trabalho, ou seja, o que a pesquisa pretende alcançar. Se necessário, também podem ser descritos objetivos específicos, que detalham as etapas ou aspectos mais concretos que serão abordados ao longo do estudo.</p>
+
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf3')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word6.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf3" class="pdf-viewer">
+                    <iframe src="word/word5.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Fim do conteúdo recolhível -->
+</section>
+
+<footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.9rem; color: #666;">
+    © 2025 Excellência Acadêmica. Todos os direitos reservados.
+</footer>
+
+<script>
+    function togglePDF(id) {
+        // IDs de todos os visualizadores de PDF
+        const pdfIds = ['pdf1', 'pdf2', 'pdf3'];
+        
+        pdfIds.forEach(function(pdfId) {
+            const pdfDiv = document.getElementById(pdfId);
+            
+            if (pdfId === id) {
+                // Alterna a exibição do PDF clicado
+                pdfDiv.style.display = (pdfDiv.style.display === "none" || pdfDiv.style.display === "") ? "block" : "none";
+            } else {
+                // Garante que todos os outros PDFs estejam ocultos
+                pdfDiv.style.display = "none";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+
+<!-- SCRIPT -->
+
+<script>
+    function togglePDF(id) {
+        // IDs de todos os visualizadores de PDF da página
+        const pdfIds = ['pdf1', 'pdf2', 'pdf3', 'pdf4', 'pdf5', 'pdf6', 'pdf7', 'pdf8', 'pdf9'];
+        
+        pdfIds.forEach(function(pdfId) {
+            const pdfDiv = document.getElementById(pdfId);
+            if (!pdfDiv) return; // Continua se o elemento não existir na página
+            
+            if (pdfId === id) {
+                // Alterna a exibição do PDF clicado
+                pdfDiv.style.display = (pdfDiv.style.display === "none" || pdfDiv.style.display === "") ? "block" : "none";
+            } else {
+                // Garante que todos os outros PDFs estejam ocultos
+                pdfDiv.style.display = "none";
+            }
+        });
+    }
+</script>
+
+<!-- SEÇÃO 2: REVISÃO DE LITERATURA -->
+<section id="contextualizacao" class="research-section">
+    <!-- ALTERADO: Adicionado cabeçalho com botão -->
+    <div class="section-header">
+        <h2>2. Contextualização do Tema e Resultados Esperados</h2>
+        <button class="toggle-btn" data-target="content-2">-</button>
+    </div>
+    
+    <!-- NOVO: Div para envolver o conteúdo recolhível -->
+    <div id="content-2" class="collapsible-content">
+        <!-- SUBSEÇÃO: REVISÃO DE LITERATURA -->
+        <div class="sub-section">
+            <h3>Revisão de Literatura e Resultados</h3>
+            <div class="image-container">
+                <img src="img/img4.png" alt="Imagem ilustrativa da revisão de literatura">
+            </div>
+
+            <p>A revisão de literatura deve iniciar com um histórico do tema, apresentando sua evolução ao longo do tempo. É importante contextualizar quando e como o tema começou a ser estudado, as mudanças de enfoque ao longo dos anos, e quais fatores econômicos, sociais ou tecnológicos influenciaram esse desenvolvimento.</p>
+            <p>Em seguida, devem ser apresentados os principais estudos e abordagens que tratam do tema. Nessa parte, o pesquisador deve citar autores relevantes, explicar quais metodologias utilizaram, quais conclusões alcançaram, e como o presente trabalho se relaciona com esses estudos. É importante mostrar se o trabalho pretende aprofundar, atualizar ou oferecer uma nova perspectiva em relação ao que já foi produzido.</p>
+            <p>Depois, devem ser discutidos os resultados positivos e negativos obtidos em pesquisas anteriores. Aqui o foco está em evidenciar os achados consistentes, divergências, limitações metodológicas e eventuais contradições na literatura, mostrando que há espaço para novas investigações.</p>
+            <p>Por fim, a revisão deve identificar as lacunas existentes na literatura acadêmica, ou seja, os aspectos que ainda não foram suficientemente explorados ou que permanecem inconclusivos. Essas lacunas justificam a realização da nova pesquisa e delimitam seu campo de contribuição.</p>
+            <p>Na parte dos Resultados Esperados, o pesquisador deve indicar claramente o que pretende encontrar com o estudo. Deve-se apresentar as hipóteses formuladas com base na teoria e literatura revisada, e indicar quais relações, efeitos ou padrões se espera identificar nos dados analisados.</p>
+
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf4')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word8.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf4" class="pdf-viewer">
+                    <iframe src="word/word7.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Fim do conteúdo recolhível -->
+</section>
+
+<footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.9rem; color: #666;">
+    © 2025 Excellência Acadêmica. Todos os direitos reservados.
+</footer>
+
+<!-- SEÇÃO 3: METODOLOGIA E RESULTADOS -->
+<section id="metodologia-resultados" class="research-section">
+    <!-- ALTERADO: Adicionado cabeçalho com botão -->
+    <div class="section-header">
+        <h2>3. Metodologia e Resultados</h2>
+        <button class="toggle-btn" data-target="content-3">-</button>
+    </div>
+
+    <!-- NOVO: Div para envolver o conteúdo recolhível -->
+    <div id="content-3" class="collapsible-content">
+        <!-- SUBSEÇÃO: METODOLOGIA -->
+        <div class="sub-section">
+            <h3>Metodologia</h3>
+            <div class="image-container">
+                <img src="img/img5.png" alt="Imagem ilustrativa da metodologia">
+            </div>
+            <p>A seção de metodologia deve iniciar definindo o tipo de pesquisa que será realizada, indicando se o estudo é qualitativo, quantitativo ou uma combinação dos dois (misto). Também é importante especificar se a pesquisa é descritiva, exploratória, explicativa, experimental, de levantamento, bibliográfica ou estudo de caso, conforme a natureza do problema e dos objetivos.</p>
+            <p>Em seguida, deve-se descrever detalhadamente como os dados foram ou serão coletados. É necessário informar onde a coleta ocorreu (ou ocorrerá), quando foi realizada, quem foram os participantes (se houver), quais instrumentos foram utilizados (questionários, entrevistas, bases de dados públicas, registros secundários, etc.) e quais procedimentos foram adotados para garantir a qualidade, validade e confiabilidade dos dados.</p>
+
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf5')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word9.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf5" class="pdf-viewer">
+                    <iframe src="word/word9.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBSEÇÃO: RESULTADOS E DISCUSSÃO -->
+        <div class="sub-section">
+            <h3>Resultados e Discussão</h3>
+            <div class="image-container">
+                <img src="img/img6.png" alt="Imagem ilustrativa de resultados e discussão">
+            </div>
+            <p>Na seção de resultados, deve-se apresentar os dados coletados e analisados, preferencialmente utilizando tabelas, figuras, gráficos ou outros recursos visuais que facilitem a compreensão. A apresentação deve ser clara e organizada, destacando os principais achados da pesquisa.</p>
+            <p>Em seguida, os resultados devem ser comparados com os de outros estudos relevantes, identificando semelhanças, diferenças ou contradições. Essa comparação ajuda a contextualizar os achados e a avaliar a consistência dos dados em relação à literatura existente.</p>
+            <p>Por fim, deve-se discutir se o trabalho atingiu os objetivos propostos, explicando como os resultados respondem à pergunta de pesquisa e se as hipóteses foram confirmadas ou refutadas. É importante detalhar as contribuições do estudo, suas limitações e sugestões para pesquisas futuras.</p>
+            <p>Após a coleta, deve-se explicar os tratamentos aplicados aos dados, como limpeza, organização, codificação, transformação de variáveis e eventuais testes de consistência. Caso haja aplicação de técnicas estatísticas, modelagem, análises qualitativas ou uso de softwares específicos, isso deve ser claramente descrito.</p>
+            <p>Por fim, é importante citar outros trabalhos que já utilizaram a mesma técnica ou metodologia adotada, mostrando que a escolha metodológica é válida e reconhecida na literatura acadêmica. Essas referências reforçam a credibilidade e fundamentação da estratégia de pesquisa adotada.</p>
+
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf6')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word10.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf6" class="pdf-viewer">
+                    <iframe src="word/word10.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Fim do conteúdo recolhível -->
+</section>
+
+<footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.9rem; color: #666;">
+    © 2025 Excellência Acadêmica. Todos os direitos reservados.
+</footer>
+
+<!-- SEÇÃO 4: CONCLUSÃO E RESUMO -->
+<section id="conclusao-resumo" class="research-section">
+    <!-- ALTERADO: Adicionado cabeçalho com botão -->
+    <div class="section-header">
+        <h2>4. Conclusão e Resumo</h2>
+        <button class="toggle-btn" data-target="content-4">-</button>
+    </div>
+
+    <!-- NOVO: Div para envolver o conteúdo recolhível -->
+    <div id="content-4" class="collapsible-content">
+        <!-- SUBSEÇÃO: CONCLUSÃO -->
+        <div class="sub-section">
+            <h3>Conclusão</h3>
+            <div class="image-container">
+                <img src="img/img7.png" alt="Imagem ilustrativa da conclusão">
+            </div>
+            <p>A conclusão deve iniciar resumindo os principais achados da pesquisa, destacando os resultados mais relevantes obtidos durante o estudo. Em seguida, deve avaliar se os objetivos gerais e específicos foram alcançados, retomando de forma clara a ligação entre os resultados obtidos e os objetivos propostos no início do trabalho.</p>
+            <p>Na sequência, é importante destacar as contribuições do estudo, mostrando de que forma ele agrega conhecimento à literatura existente, resolve lacunas identificadas ou traz novas perspectivas teóricas ou práticas.</p>
+            <p>Por fim, a conclusão deve sugerir possíveis direções para pesquisas futuras, indicando temas relacionados que ainda precisam ser aprofundados, limitações que podem ser superadas em novos estudos ou novas metodologias que podem ser aplicadas em pesquisas semelhantes.</p>
+
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf7')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word11.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf7" class="pdf-viewer">
+                    <iframe src="word/word11.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBSEÇÃO: RESUMO -->
+        <div class="sub-section">
+            <h3>Resumo</h3>
+            <div class="image-container">
+                <img src="img/img8.png" alt="Imagem ilustrativa do resumo">
+            </div>
+            <p>O resumo deve começar apresentando o contexto da pesquisa e explicando por que o tema é relevante, destacando brevemente o problema que motivou o estudo. Em seguida, devem ser expostos os objetivos gerais e específicos, mostrando de forma clara o que o trabalho pretendeu alcançar.</p>
+            <p>Depois, deve-se descrever de forma sucinta a metodologia aplicada, informando o tipo de pesquisa, a forma de coleta e análise dos dados, sem entrar em detalhes técnicos.</p>
+            <p>Em seguida, o resumo deve destacar os principais resultados obtidos, apontando os achados mais relevantes de forma objetiva.</p>
+            <p>Por fim, deve apresentar uma síntese da conclusão, indicando se os objetivos foram atingidos, quais as principais contribuições do trabalho e, se pertinente, eventuais implicações práticas ou sugestões para pesquisas futuras.</p>
+
+            <div class="examples-box">
+                <h4>📄 Exemplos</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf8')" class="btn btn-view">Visualizar Exemplo (PDF)</button>
+                    <a href="word/word12.docx" download class="btn btn-download">Download Modelo (DOCX)</a>
+                </div>
+                <div id="pdf8" class="pdf-viewer">
+                    <iframe src="word/word12.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Fim do conteúdo recolhível -->
+</section>
+
+<footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.9rem; color: #666;">
+    © 2025 Excellência Acadêmica. Todos os direitos reservados.
+</footer>
+
+<!-- SEÇÃO 5: SLIDES E APRESENTAÇÃO -->
+<section id="apresentacao" class="research-section">
+    <!-- ALTERADO: Adicionado cabeçalho com botão -->
+    <div class="section-header">
+        <h2>5. Slides e Apresentação</h2>
+        <button class="toggle-btn" data-target="content-5">-</button>
+    </div>
+
+    <!-- NOVO: Div para envolver o conteúdo recolhível -->
+    <div id="content-5" class="collapsible-content">
+        <div class="sub-section">
+            <div class="image-container">
+                <img src="img/img9.png" alt="Imagem ilustrativa da apresentação">
+            </div>
+
+            <h3>📊 Estruturando os Slides</h3>
+            <p>Menos é mais. Seus slides são um apoio visual, não um roteiro para ser lido.</p>
+            <ul>
+                <li><strong>Quantidade:</strong> Para uma apresentação de 15-20 minutos, de 10 a 15 slides são suficientes.</li>
+                <li><strong>Conteúdo:</strong> Use tópicos curtos, imagens, gráficos e palavras-chave. Evite parágrafos longos.</li>
+                <li><strong>Estrutura Sugerida:</strong>
+                    <ol style="margin-top: 10px; padding-left: 40px;">
+                        <li>Capa: Título, seu nome, orientador.</li>
+                        <li>Roteiro: O que será apresentado.</li>
+                        <li>Introdução: Problema de pesquisa e objetivos.</li>
+                        <li>Metodologia: Como a pesquisa foi feita.</li>
+                        <li>Resultados e Discussão: Os principais achados (seja visual!).</li>
+                        <li>Considerações Finais: A conclusão do seu estudo.</li>
+                        <li>Obrigado e Contato.</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h3>🎤 Dicas para a Defesa Oral</h3>
+            <ul>
+                <li><strong>Domine o Conteúdo:</strong> Você é o maior especialista no seu tema. Fale com confiança.</li>
+                <li><strong>Ensaiar é Fundamental:</strong> Pratique a apresentação várias vezes, cronometrando o tempo. Apresente para amigos ou familiares e peça feedback.</li>
+                <li><strong>Fale com Clareza:</strong> Mantenha um ritmo de fala calmo e use pausas estratégicas para enfatizar pontos importantes.</li>
+                <li><strong>Lidando com a Banca:</strong>
+                    <ul style="margin-top: 10px; list-style-type: '– '; padding-left: 40px;">
+                        <li>Ouça a pergunta até o final antes de responder.</li>
+                        <li>Seja honesto. Se não souber a resposta, admita e diga que é um ponto interessante para reflexão ou futuras pesquisas. Não invente.</li>
+                        <li>Encare as perguntas como um diálogo para enriquecer seu trabalho, não como um ataque.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="examples-box">
+                <h4>📄 Visualizar Modelo de Slides</h4>
+                <div class="button-group">
+                    <button onclick="togglePDF('pdf9')" class="btn btn-view">Visualizar Exemplo (PowerPoint)</button>
+                </div>
+                <div id="pdf9" class="pdf-viewer">
+                    <iframe src="word/word13.pdf"></iframe>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Fim do conteúdo recolhível -->
+</section>
+
+<footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.9rem; color: #666;">
+    © 2025 Excellência Acadêmica. Todos os direitos reservados.
+</footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <a id="backToTopBtn" title="Voltar ao topo">↑</a>
+
+<!-- Botão de Reportar Erro Padronizado -->
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSc6yMxVIg3aYJllgvLhyjG2-j7cFnXd4lADZzDkuNu1-edqgw/viewform?usp=dialog" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="report-btn" 
+   style="display: inline-block; padding: 10px 20px; background-color: #f44336; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 1rem;">
+    Reportar Erro
+</a>
+
+    
+    <script>
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        backToTopBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+    
+    <!-- NOVO: SCRIPT PARA MINIMIZAR/EXPANDIR SEÇÕES -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Seleciona todos os botões de toggle
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            
+            toggleButtons.forEach(button => {
+                // Adiciona um evento de clique para cada botão
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-target');
+                    const content = document.getElementById(targetId);
+
+                    if (content) {
+                        // Alterna a classe 'collapsed' no conteúdo
+                        content.classList.toggle('collapsed');
+
+                        // Altera o texto do botão entre '+' e '-'
+                        if (content.classList.contains('collapsed')) {
+                            button.textContent = '+';
+                        } else {
+                            button.textContent = '-';
+                        }
+                    }
+                });
+
+                // NOVO: Adiciona a mesma funcionalidade de clique ao cabeçalho da seção
+                const header = button.closest('.section-header');
+                if (header) {
+                    header.addEventListener('click', (event) => {
+                        // Evita que o clique no botão dispare este evento duas vezes
+                        if (event.target !== button) {
+                            button.click();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
